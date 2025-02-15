@@ -1,9 +1,12 @@
-function Button({ name }) {
+import React from 'react';
+import { Button } from '@mui/material';
+
+function ButtonHeader({ name }) {
   return (
     <div>
-      <button>{name}</button>
+      <Button variant="contained">{name}</Button>
     </div>
   );
 }
 
-export default Button;
+export default ButtonHeader;
