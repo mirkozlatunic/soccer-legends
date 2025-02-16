@@ -3,7 +3,7 @@ import Button from './Button';
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <Navbar />
       <Button name="Sign In" />
       <Button name="Register" />
