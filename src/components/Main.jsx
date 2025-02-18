@@ -1,5 +1,7 @@
+import './Main.css';
+
 function Main() {
-  return <div>Main</div>;
+  return <div className="main">Main</div>;
 }
 
 export default Main;
