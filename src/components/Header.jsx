@@ -7,9 +7,6 @@ function Header() {
   return (
     <header className="header">
       <Navbar />
-      <Button name="Sign In" />
-      <Button name="Register" />
-      <Button name="Sign Out" />
     </header>
   );
 }
