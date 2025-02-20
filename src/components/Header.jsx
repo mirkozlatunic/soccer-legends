@@ -1,5 +1,4 @@
 import Navbar from './navbar';
-import Button from './Button';
 
 import './Header.css';
 
