@@ -5,8 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Rating } from '@mui/material';
 
-export default function MediaCard() {
+export default function MediaCard({ name, description }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -16,15 +17,14 @@ export default function MediaCard() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {name}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
+        <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
