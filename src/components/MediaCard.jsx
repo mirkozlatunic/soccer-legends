@@ -1,13 +1,20 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Rating } from '@mui/material';
+import Rating from '@mui/material/Rating';
+import PropTypes from 'prop-types';
 
-export default function MediaCard({ name, description }) {
+MediaCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+};
+
+export default function MediaCard({ name, description, rating }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -24,7 +31,7 @@ export default function MediaCard({ name, description }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+        <Rating name="size-medium" defaultValue={rating} />
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
